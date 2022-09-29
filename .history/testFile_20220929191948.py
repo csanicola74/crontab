@@ -8,8 +8,6 @@ import json
 import os
 import sys
 import time
-import csv
-import pandas as pd
 
 # get the current time
 now = time.time()
@@ -23,11 +21,11 @@ cwd = os.getcwd()
 print(cwd)
 
 # create a new dictionary with dummy data
-bitcoin_data = pd.read_json(
+bitcoin_data = requests.get(
     'https://api.coindesk.com/v1/bpi/currentprice.json')
 
 # save data to a local csv file
-bitcoin_data.to_csv('data/bitcoin_data.csv', index=None)
+bitcoin_data.to_csv('data/bitcoin_data.csv')
 
 # get the current time
 now = time.time()

@@ -27,7 +27,7 @@ bitcoin_data = pd.read_json(
     'https://api.coindesk.com/v1/bpi/currentprice.json')
 
 # save data to a local csv file
-bitcoin_data.to_csv('data/bitcoin_data.csv', index=None)
+bitcoin_data.to_csv('data/bitcoin_data.csv', index=Nopne)
 
 # get the current time
 now = time.time()
