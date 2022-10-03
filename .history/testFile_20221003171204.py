@@ -25,7 +25,6 @@ print(cwd)
 # create a new dictionary with dummy data
 bitcoin_data = pd.read_json(
     'https://api.coindesk.com/v1/bpi/currentprice.json')
-bitcoin_data
 
 # save data to a local csv file
 bitcoin_data.to_csv('data/bitcoin_data.csv', index=None)
